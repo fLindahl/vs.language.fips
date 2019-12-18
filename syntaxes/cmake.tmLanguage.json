@@ -1,0 +1,23 @@
+{
+	"scopeName": "fips.injection",
+	"injectionSelector": "L:source.cmake",
+	"patterns": [{
+		"include": "#cmake-constants"
+	},{
+		"include": "#cmake-keywords"
+	}],
+	"repository": {
+		"cmake-constants": {
+			"patterns": [{
+				"match": "(?i:FIPS_(POSIX|WINDOWS|OSX|CLANG|GCC|MSVC|LINUX|MACOS|IOS|WIN32|WIN64|EMSCRIPTEN|ANDROID|HOST_WINDOWS|HOST_OSX|HOST_LINUX|ROOT_DIR|PROJECT_DIR|DEPLOY_DIR|CONFIG|IMPORT))",
+				"name": "variable.source.cmake"
+			}]
+		},
+		"cmake-keywords": {
+			"patterns": [{
+				"match": "(?i:fips_(vs_warning_level|setup|finish|project|ide_group|add_subdirectory|include_directories|begin_module|end_module|begin_lib|end_lib|begin_sharedlib|end_sharedlib|begin_app|end_app|dir|files|files_ex|src|deps|libs|libs_debug|generate))",
+				"name": "keyword.cmake"
+			}]
+		}
+	}
+}

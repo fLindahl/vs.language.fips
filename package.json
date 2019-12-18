@@ -1,0 +1,25 @@
+{
+    "name": "fips-lang",
+    "displayName": "Fips langugage support",
+    "description": "Fips langugage support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "grammars": [{
+			"path": "./syntaxes/cmake.tmLanguage.json",
+			"scopeName": "fips.injection",
+            "injectTo": ["source.cmake"]
+		}],
+		"snippets": [
+			{
+				"language": "cmake",
+				"path": "./snippets/fips.json"
+			}
+		]
+    }
+}

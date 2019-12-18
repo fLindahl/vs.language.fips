@@ -1,0 +1,10 @@
+{
+    "Add fips setup": {
+    	"scope": "cmake",
+    	"prefix": "fsetup",
+    	"body": [
+    		"fips_setup($0)"
+    	],
+    	"description": "N/A"
+    }
+}
